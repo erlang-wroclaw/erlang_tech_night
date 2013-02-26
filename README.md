@@ -10,3 +10,9 @@ Cyryl:
 * thinking functional
  * benefits of knowing functional language for OOP programmers
 
+* sample OOP program
+
+Fabian:
+* rewriting OOP example in Erlang
+* Q&A
+
