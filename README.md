@@ -1,5 +1,6 @@
-probly in https://github.com/infews/keydown
-or this https://github.com/egonSchiele/mdpress
+    mdpress -s default -v -a slides.md
+
+
 erlang_tech_night
 =================
 layout:
