@@ -1,5 +1,9 @@
 # Erlang Tech Night
-> sponsored by Infusion
+> sponsored by *Infusion*
+
+---
+
+# Who are we ?
 
 ---
 

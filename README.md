@@ -1,4 +1,4 @@
-    mdpress -s default -v -a slides.md
+    mdpress -s cypress -v -a slides.md
 
 
 erlang_tech_night
