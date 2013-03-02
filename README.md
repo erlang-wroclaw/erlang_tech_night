@@ -2,11 +2,11 @@
  .net: use `--path=../../../../data` for launch from debug
 
 demo program:
-1. get directory as parameter
-2. for each file in the directory:
-2.1 split into words
-2.2 count words
-3. display count per file
+ 1. get directory as parameter
+ 2. for each file in the directory:
+ 2.1 split into words
+ 2.2 count words
+ 3. display count per file
 
 
 
