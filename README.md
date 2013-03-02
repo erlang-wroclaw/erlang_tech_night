@@ -52,8 +52,8 @@ reference output:
  C:\Users\cplotnicki\dev\erlang_tech_night\data\2drvb10.txt: 448844
  C:\Users\cplotnicki\dev\erlang_tech_night\data\1drvb10.txt: 467351
  C:\Users\cplotnicki\dev\erlang_tech_night\data\nkrnn11.txt: 371870
-
-all words in all files: 4740653
+ 
+ > all words in all files: 4740653
 
 erlang_tech_night
 =================
