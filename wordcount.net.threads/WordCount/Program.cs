@@ -14,10 +14,10 @@ namespace WordCount
 
         static void Main(string[] args)
         {
-            //one thread per file
             var options = new CommandlineOptions();
             if (!Parser.Default.ParseArguments(args, options))
             {
+                //nonparsable arguments
                 return;
             }
 
