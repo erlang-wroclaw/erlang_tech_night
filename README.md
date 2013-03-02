@@ -1,5 +1,5 @@
     mdpress -s cypress -v -a slides.md
-
+ .net: use `--path=../../../../data` for launch from debug
 
 erlang_tech_night
 =================
