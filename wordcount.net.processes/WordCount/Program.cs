@@ -35,6 +35,7 @@ namespace WordCount
             var random = new Random();
             Parallel.ForEach(filePaths, path =>
             {
+                //processes are great, see Google Chrome
                 var self = Process.GetCurrentProcess().MainModule.FileName;
                 self = self.Replace(".vshost", "");
                 ProcessStartInfo info = new ProcessStartInfo(self);
@@ -50,7 +51,7 @@ namespace WordCount
                     info.Arguments =  "--port=" + port;
                 }
                 
-                info.UseShellExecute = true;
+                info.UseShellExecute = true;//just to show blinking windows
                 var serverProcess = Process.Start(info);
 
                 ChannelFactory<IServer> httpFactory =
@@ -65,6 +66,7 @@ namespace WordCount
                 {
                     words = server.CountWords(path);
                 }
+                //happens sometimes, e.g. chosen port is taken by another app..
                 catch (Exception e)
                 {
                     //Console.WriteLine(e.ToString());
@@ -84,6 +86,7 @@ namespace WordCount
             Console.ReadKey();
         }
 
+        //debugging server part is awful
         private static void StartServer(int port)
         {
             var uris = new Uri[] { new Uri("http://localhost:"+port) };
