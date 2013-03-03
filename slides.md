@@ -22,7 +22,8 @@
 
 ---
 
-## programming is fun()
+## programming is fun().  
+## with less state come less bugs
 
 ---
 
