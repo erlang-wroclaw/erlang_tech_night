@@ -4,6 +4,21 @@
 ---
 
 # Who are we ?
+> Of all the things I've lost, I miss my mind the most.
+
+---
+
+## What is this all about ?  
+![](../images/woodshop.jpg)
+## caveat: this isn't woodshop class.
+
+---
+
+
+
+---
+
+# The Movie
 
 ---
 
