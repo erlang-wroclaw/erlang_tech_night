@@ -8,13 +8,17 @@
 
 ---
 
-## What is this all about ?  
 ![](../images/woodshop.jpg)
-## caveat: this isn't woodshop class.
+## this isn't your woodshop class,  
+## Mr Goldstein.
 
 ---
 
+# Erlang
 
+1. FUNctional  
+2. VM is your infrastructure  
+3. 
 
 ---
 
