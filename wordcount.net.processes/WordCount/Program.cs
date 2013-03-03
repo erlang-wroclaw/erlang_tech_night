@@ -31,15 +31,22 @@ namespace WordCount
             var filePaths = Directory.EnumerateFiles(directoryPath);
 
             ulong count = 0;
-            var port = 12345;
+            var usedPorts = new List<int>();
+            var random = new Random();
             Parallel.ForEach(filePaths, path =>
             {
                 var self = Process.GetCurrentProcess().MainModule.FileName;
                 self = self.Replace(".vshost", "");
                 ProcessStartInfo info = new ProcessStartInfo(self);
+                int port = 12345;
                 lock (_locker)
                 {
-                    port++;
+                    do
+                    {
+                        port = random.Next(1025, 65530);
+                    }
+                    while (usedPorts.Contains(port));
+                    
                     info.Arguments =  "--port=" + port;
                 }
                 
