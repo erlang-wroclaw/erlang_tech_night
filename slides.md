@@ -1,5 +1,5 @@
 # Erlang Tech Night
-> sponsored by *Infusion*
+> made possible by *Infusion*
 
 ---
 
@@ -14,11 +14,23 @@
 
 ---
 
-# Erlang
+## Erlang
 
-1. FUNctional  
-2. VM is your infrastructure  
-3. 
+## 1. Made for telephony switches
+## 2. FUNctional  
+## 3. VM is your infrastructure  
+
+---
+
+## programming is fun()
+
+---
+
+C# threads demo
+
+---
+
+C# processes demo
 
 ---
 
@@ -26,18 +38,14 @@
 
 ---
 
-> doesn't mean you can put syrup on me before I'm ready to come out of the oven.
-
-	mdpress++
+live Erlang demo
 
 ---
-= data-x='1000'
-# Let's Make Lists!
 
-1. Chicken
-2. *Emphasized Chicken*
-3. [Chicken Link](http://github.com/egonschiele/mdpress)
+Q&A
 
-- unordered `chicken = 1`
+---
+made with mdpress
+
 
 
