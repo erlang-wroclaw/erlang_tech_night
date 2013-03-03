@@ -14,16 +14,28 @@
 
 ---
 
-## Erlang
-
-## 1. Made for telephony switches
-## 2. FUNctional  
-## 3. VM is your infrastructure  
+# Erlang
 
 ---
 
-## programming is fun().  
-## with less state come less bugs
+## programming is fun(). (so is this pun) 
+> with less state come less bugs
+
+---
+
+## distribute all the things !
+
+---
+
+
+
+---
+
+# The Movie
+
+---
+
+break(5);
 
 ---
 
@@ -35,7 +47,8 @@ C# processes demo
 
 ---
 
-# The Movie
+> Any sufficiently complicated concurrent	program	in another language contains an	ad-hoc,	
+  informally-speciﬁed, bug-ridden, slow implementation of half of Erlang.
 
 ---
 
@@ -43,7 +56,7 @@ live Erlang demo
 
 ---
 
-Q&A
+# Q&A
 
 ---
 made with mdpress
