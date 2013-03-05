@@ -30,11 +30,6 @@ namespace WordCount
             return file.Words;
         }
 
-        public void Close()
-        {
-            Environment.Exit(0);
-        }
-
     }
 }
 

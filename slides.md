@@ -14,7 +14,7 @@
 
 ---
 
-# Erlang
+# about:erlang
 
 ---
 
