@@ -15,11 +15,12 @@ list_data_dir(DataPath) ->
 file(Filename, Path) ->
     File = filename:join(Path, Filename),
     {ok, Port} = file:open(File, read),
-    print_line(Port),
+    Count = count(Port, 0),
+    io:format("~p: ~p~n", [File, Count]),
     file:close(Port),
     ok.
 
-print_line(Port) ->
+count(Port, Count) ->
     case file:read_line(Port) of
         {ok, Line} ->
             WordsWithNewlines = string:tokens(Line, " "),
@@ -27,9 +28,8 @@ print_line(Port) ->
                         Word /= "\n"
                 end, WordsWithNewlines),
             N = erlang:length(Words),
-            io:format("~p~n", [N]),
-            print_line(Port);
+            count(Port, Count+N);
         eof ->
-            ok
+            Count
     end.
 
