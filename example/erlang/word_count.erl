@@ -22,7 +22,12 @@ file(Filename, Path) ->
 print_line(Port) ->
     case file:read_line(Port) of
         {ok, Line} ->
-            io:format("~p~n", [Line]),
+            WordsWithNewlines = string:tokens(Line, " "),
+            Words = lists:filter(fun(Word) ->
+                        Word /= "\n"
+                end, WordsWithNewlines),
+            N = erlang:length(Words),
+            io:format("~p~n", [N]),
             print_line(Port);
         eof ->
             ok
