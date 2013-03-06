@@ -49,6 +49,7 @@ namespace WordCount
                     while (usedPorts.Contains(port));
                     
                     info.Arguments =  "--port=" + port;
+                    usedPorts.Add(port);
                 }
                 
                 info.UseShellExecute = true;//just to show blinking windows
