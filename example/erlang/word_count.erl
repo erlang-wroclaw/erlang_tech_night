@@ -5,23 +5,32 @@ start() ->
     start("../data").
 
 start(DataPath) ->
+    From = self(),
     {ok, List} = file:list_dir(DataPath),
-    CountPerFile = lists:map(fun(Filename) ->
-                worker_init(Filename, DataPath)
+    io:format("(pid:~p) Start counting. Number of files ~p~n", [self(), erlang:length(List)]),
+    Pids = lists:map(fun(Filename) ->
+                spawn(fun() -> worker_init(From, Filename, DataPath) end)
         end, List),
-    Sum = lists:sum(CountPerFile),
-    io:format("Sum: ~p~n", [Sum]).
+    loop(erlang:length(Pids), 0).
 
-worker_init(Filename, Path) ->
+loop(0, WordCount) ->
+    io:format("(pid:~p) Sum: ~p~n", [self(), WordCount]);
+loop(Workers, WordCount) ->
+    receive
+        {count, N} -> loop(Workers-1, WordCount+N)
+    end.
+
+worker_init(From, Filename, Path) ->
     File = filename:join(Path, Filename),
     {ok, Port} = file:open(File, read),
-    worker(Port, File, 0).
+    worker(From, Port, File, 0).
 
-worker_terminate(Port, Count) ->
+worker_terminate(From, Port, File, Count) ->
     file:close(Port),
-    Count.
+    io:format("(pid:~p) ~p: ~p~n", [self(), File, Count]),
+    From ! {count, Count}.
 
-worker(Port, File, Count) ->
+worker(From, Port, File, Count) ->
     case file:read_line(Port) of
         {ok, Line} ->
             WordsWithNewlines = string:tokens(Line, " "),
@@ -29,9 +38,8 @@ worker(Port, File, Count) ->
                         Word /= "\n"
                 end, WordsWithNewlines),
             N = erlang:length(Words),
-            worker(Port, File, Count+N);
+            worker(From, Port, File, Count+N);
         eof ->
-            io:format("~p: ~p~n", [File, Count]),
-            worker_terminate(Port, Count)
+            worker_terminate(From, Port, File, Count)
     end.
 
