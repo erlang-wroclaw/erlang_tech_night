@@ -1,4 +1,5 @@
-    mdpress -s cypress -v -a slides.md
+    cd slides
+    mdpress -s cypress slides.md
  .net: use `--path=../../../../data` for launch from debug
 
 demo program:
