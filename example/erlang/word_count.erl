@@ -5,20 +5,20 @@ start() ->
     start("../data").
 
 start(DataPath) ->
-    [ File | _ ] = list_data_dir(DataPath),
-    file(File, DataPath).
-
-list_data_dir(DataPath) ->
     {ok, List} = file:list_dir(DataPath),
-    List.
+    CountPerFile = lists:map(fun(Filename) ->
+                file(Filename, DataPath)
+        end, List),
+    Sum = lists:sum(CountPerFile),
+    io:format("Sum: ~p~n", [Sum]).
 
 file(Filename, Path) ->
     File = filename:join(Path, Filename),
     {ok, Port} = file:open(File, read),
     Count = count(Port, 0),
-    io:format("~p: ~p~n", [File, Count]),
     file:close(Port),
-    ok.
+    io:format("~p: ~p~n", [File, Count]),
+    Count.
 
 count(Port, Count) ->
     case file:read_line(Port) of
