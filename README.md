@@ -42,14 +42,14 @@ reference output:
 
 ## erlang
 
+    $ cd example/erlang/
+
 ### console #1
 
-    $ cd example/erlang/
     $ git checkout <milestone-sha1> -- word_count.erl
 
 ### console #2
 
-    $ cd example/erlang/
     $ erl
     Erlang R15B01 (erts-5.9.1) [source] [smp:4:4] [async-threads:0] [hipe] [kernel-poll:false]
 
