@@ -20,7 +20,11 @@ file(Filename, Path) ->
     ok.
 
 print_line(Port) ->
-    {ok, Line} = file:read_line(Port),
-    io:format("~p~n", [Line]),
-    print_line(Port).
+    case file:read_line(Port) of
+        {ok, Line} ->
+            io:format("~p~n", [Line]),
+            print_line(Port);
+        eof ->
+            ok
+    end.
 
