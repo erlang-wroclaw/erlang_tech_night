@@ -61,13 +61,13 @@ reference output:
 
 ### milestones
 
-\#1. `acbed19a91dee10c1cea96c3db9f213dc42f1302` empty module example
-\#2. `287999f941c405442a0e2fe58bedc4c15ba1c307` list data dir
-\#3. `ba1ec3912c3afe3b23a98498cc140d4d862703bd` print lines + exception
-\#4. `b5726365630e4ad9b2f0fcb57b9c382a60ba54cf` proper eof handling
-\#5. `df9282c164f5a9157ce242e2f8e4a41118be9053` count words for each line
-\#6. `51dd3682a0094ce80672624d641931a4ff5878ac` sum
-\#7. `6c88cdf951013159e6be24badcd36ef4d3060cb2` run on all files + sum
-\#8. `1145054318d0385674603b1093c72c93c1c92070` prepare for processes
-\#9. `78a74306b141214eb0c884f3f3b144aeccde18ec` processes!!!!
+1. `acbed19a91dee10c1cea96c3db9f213dc42f1302` empty module example
+2. `287999f941c405442a0e2fe58bedc4c15ba1c307` list data dir
+3. `ba1ec3912c3afe3b23a98498cc140d4d862703bd` print lines + exception
+4. `b5726365630e4ad9b2f0fcb57b9c382a60ba54cf` proper eof handling
+5. `df9282c164f5a9157ce242e2f8e4a41118be9053` count words for each line
+6. `51dd3682a0094ce80672624d641931a4ff5878ac` sum
+7. `6c88cdf951013159e6be24badcd36ef4d3060cb2` run on all files + sum
+8. `1145054318d0385674603b1093c72c93c1c92070` prepare for processes
+9. `78a74306b141214eb0c884f3f3b144aeccde18ec` processes!!!!
 
