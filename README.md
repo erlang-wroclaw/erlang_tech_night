@@ -19,6 +19,7 @@
 
 # slides
 
+<http://wroclaw.erlangers.org/erlang_tech_night>
 
 # the movie
 
