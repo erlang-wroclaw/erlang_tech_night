@@ -1,5 +1,7 @@
 # erlang_tech_night
 
+# agenda
+
 ### Cyryl
 
 * Erlang the movie
@@ -17,8 +19,10 @@
 
 # slides
 
-    cd slides
-    mdpress -s cypress slides.md
+
+# the movie
+
+google + [erlang the movei](http://youtu.be/xrIjfIjssLE)
 
 # demo
 
@@ -35,7 +39,9 @@ demo program:
 
 reference output:
  > C:\Users\cplotnicki\dev\erlang_tech_night\data\1ws4910.txt: 18368
- > --CUT--
+
+ > ...
+
  > C:\Users\cplotnicki\dev\erlang_tech_night\data\nkrnn11.txt: 371870
 
  > all words in all files: 4740653
