@@ -23,7 +23,7 @@
 
 # the movie
 
-google + [erlang the movei](http://youtu.be/xrIjfIjssLE)
+google + [erlang the movie](http://youtu.be/xrIjfIjssLE)
 
 # demo
 
